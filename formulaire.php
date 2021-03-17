@@ -61,13 +61,9 @@ if (isset($_GET["userid"])) {
         <span class="required">Login</span>
         </label>
     </div>
-    <input type="checkbox" name="show-password" class="show-password a11y-hidden" id="show-password" tabindex="3" />
-    <label class="label-show-password" for="show-password">
-        <span>Show Password</span>
-    </label>
     <div>
         <label class="label-password">
-        <input type="text" class="text" name="mdp" placeholder="password" tabindex="2" required />
+        <input type="password" class="text" name="mdp" placeholder="password" tabindex="2" required />
         <span class="required">Password</span>
         </label>
     </div>
@@ -172,8 +168,8 @@ if (isset($_POST['login'])) {
     if ($password != "" && $username != "") {
         $index = findUserInDatabase($username, $password);
         
-        header("location: ".$url."?question=".$_GET["question"]."&userid=".$index);
-        
+        if ($index >= 0)
+            header("location: ".$url."?question=".$_GET["question"]."&userid=".$index); 
     }
     
 }

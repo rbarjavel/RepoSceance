@@ -31,10 +31,6 @@
       <span class="required">Login</span>
     </label>
   </div>
-  <input type="checkbox" name="show-password" class="show-password a11y-hidden" id="show-password" tabindex="3" />
-  <label class="label-show-password" for="show-password">
-    <span>Show Password</span>
-  </label>
   <div>
     <label class="label-password">
       <input type="text" class="text" name="mdp" placeholder="password" tabindex="2" required />
