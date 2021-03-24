@@ -27,21 +27,20 @@
   <h1 class="a11y-hidden">Login Form</h1>
   <div>
     <label class="label-email">
-      <input type="text" class="text" name="log" placeholder="login" tabindex="1" required />
+      <input type="text" class="text" name="username" placeholder="login" tabindex="1" required />
       <span class="required">Login</span>
     </label>
   </div>
   <div>
     <label class="label-password">
-      <input type="text" class="text" name="mdp" placeholder="password" tabindex="2" required />
+      <input type="text" class="text" name="password" placeholder="password" tabindex="2" required />
       <span class="required">Password</span>
     </label>
   </div>
-  <input type="submit" value="login" name="login"/>
+  <input type="submit" value="login" name="register"/>
 </form>
 
- <?php
-
+<?php
 function addUserToDataBase($user, $password){
     $usersDB = json_decode(file_get_contents("./db/user.json"), true);
 
@@ -88,9 +87,10 @@ if (isset($_POST['login'])) {
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    echo'<p>register<p/>';
-    if ($password != "" && $username != "")
+    if ($password != "" && $username != "") {
+        echo "test";
         addUserToDataBase($username, $password);
+    }
 }
 
 ?> 
