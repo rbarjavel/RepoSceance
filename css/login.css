@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    display: flex;
+    background-color: #ffcbca;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Space mono';
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    color: #eb8280;
+}
+
+.under-text {
+    font-family: 'Space Mono';
+    font-style: italic;
+    font-size: 13px;
+}
+
+.inside-form {
+    display: table-row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 30px;
+}
+
+form {
+    display: table-row;
+    flex-wrap: wrap;
+}
+
+form > div {
+    margin: 20px;
+}
+
+.form-style {
+    display: flex;
+    justify-content: center;
+    width: 20em;
+
+    border: solid 5px #eb8280;
+    border-radius: 20px;
+    margin: 15em auto;
+
+    background-color: #f5ffb9;
+}
+
+input[type=text], input[type=password] {
+  border: none;
+  background-color: #f5ffb9;
+  font-family: 'Space Mono';
+  border-bottom: 2px solid #81ccc8;
+}
+
+input[type=submit] {
+    border: none;
+
+    width: 70%;
+    margin: auto;
+    font-family: 'Space Mono';
+    color: #fff;
+    background-color: #eb8280;
+}
+
+input[type=submit]:hover {
+    border: none;
+
+    width: 70%;
+    margin: auto;
+    font-family: 'Space Mono';
+    color: #fff;
+    background-color: #ffcbca;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+  border: none;
+  background-color: #f5ffb9;
+  font-family: 'Space Mono';
+  border-bottom: 2px solid #eb8280;
+}
+
+a {
+    font-size: 13px;
+    color: black;
+    font-style: italic;
+}
+
+a:hover {
+    font-size: 13px;
+    color: #eb8280;
+    font-style: italic;
+}
